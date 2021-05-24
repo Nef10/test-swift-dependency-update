@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Rainbow",
+        "repositoryURL": "https://github.com/onevcat/Rainbow",
+        "state": {
+          "branch": null,
+          "revision": "626c3d4b6b55354b4af3aa309f998fae9b31a3d9",
+          "version": "3.2.0"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "831ed5e860a70e745bc1337830af4786b2576881",
+          "version": "0.4.1"
+        }
+      },
+      {
+        "package": "SwiftBeanCountModel",
+        "repositoryURL": "https://github.com/Nef10/SwiftBeanCountModel.git",
+        "state": {
+          "branch": null,
+          "revision": "a72ca4e46e816638be644ddfbb3c3f9233a5c944",
+          "version": "0.1.6"
+        }
+      },
+      {
+        "package": "SwiftBeanCountParser",
+        "repositoryURL": "https://github.com/Nef10/SwiftBeanCountParser.git",
+        "state": {
+          "branch": null,
+          "revision": "4299b420e43abeb113a315467b1a70a5017ca758",
+          "version": "0.1.8"
+        }
+      },
+      {
+        "package": "SwiftyTextTable",
+        "repositoryURL": "https://github.com/scottrhoyt/SwiftyTextTable.git",
+        "state": {
+          "branch": null,
+          "revision": "c6df6cf533d120716bff38f8ff9885e1ce2a4ac3",
+          "version": "0.9.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

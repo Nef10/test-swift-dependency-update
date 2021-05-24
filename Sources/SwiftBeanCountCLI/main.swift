@@ -1,0 +1,3 @@
+import SwiftBeanCountCLILibrary
+
+SwiftBeanCountCLI.main()
