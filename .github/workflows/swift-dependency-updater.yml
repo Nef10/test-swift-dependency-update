@@ -22,7 +22,7 @@ jobs:
       uses: tibdex/github-app-token@v1
       with:
         app_id: ${{ secrets.APP_ID }}
-        private_key: ${{ secrets.PRIVATE_KEY }}
+        private_key: ${{ secrets.APP_PRIVATE_KEY }}
     - name: Install swift-package-updater
       uses: fjcaetano/mint-action@v1.0.2
       with:
