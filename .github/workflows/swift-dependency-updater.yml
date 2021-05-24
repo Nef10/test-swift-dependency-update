@@ -24,7 +24,7 @@ jobs:
         app_id: ${{ secrets.APP_ID }}
         private_key: ${{ secrets.PRIVATE_KEY }}
     - name: Install swift-package-updater
-      uses: fjcaetano/mint-action@1.0.2
+      uses: fjcaetano/mint-action@v1.0.2
       with:
         package: Nef10/swift-package-updater@actions
     - name: Perform updates
