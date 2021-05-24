@@ -16,18 +16,19 @@ jobs:
       matrix:
         os: [macOS-latest, ubuntu-latest]
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        path: repo
-    - name: Install Swift
-      uses: fwal/setup-swift@v1.7.0
     - name: Generate token
       id: generate_token
       uses: tibdex/github-app-token@v1
       with:
         app_id: ${{ secrets.APP_ID }}
         private_key: ${{ secrets.APP_PRIVATE_KEY }}
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        path: repo
+        token: ${{ steps.generate_token.outputs.token }}
+    - name: Install Swift
+      uses: fwal/setup-swift@v1.7.0
     - name: Checkout swift-dependency-updater
       uses: actions/checkout@v2
       with:
