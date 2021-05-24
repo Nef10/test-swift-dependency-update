@@ -5,6 +5,9 @@ on:
     - cron:  '17 10 * * 5'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Update Swift Dependencies
@@ -15,6 +18,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        path: repo
     - name: Install Swift
       uses: fwal/setup-swift@v1.7.0
     - name: Generate token
@@ -23,11 +28,13 @@ jobs:
       with:
         app_id: ${{ secrets.APP_ID }}
         private_key: ${{ secrets.APP_PRIVATE_KEY }}
-    - name: Install swift-package-updater
-      uses: fjcaetano/mint-action@v1.0.2
+    - name: Checkout swift-package-updater
+      uses: actions/checkout@v2
       with:
-        package: Nef10/swift-package-updater@actions
-    - name: Perform updates
-      run: swift-package-updater list
+        repository: Nef10/swift-package-updater
+        path: swift-package-updater
+        ref: actions
+    - name: Run swift-package-updater
+      run: cd swift-package-updater && swift run swift-dependency-updater list ../repo
       env:
         TOKEN: ${{ steps.generate_token.outputs.token }}
