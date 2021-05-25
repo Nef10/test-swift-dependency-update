@@ -26,7 +26,7 @@ struct Accounts: FormattableLedgerCommand {
 
     func validate() throws {
         if format == .csv && count {
-            throw ValidationError("Cannot print count in csv format. Please remove count flag or specify another format.")
+            throw ValidationError("Cannot print count in csv format! Please remove count flag or specify another format.")
         }
     }
 
