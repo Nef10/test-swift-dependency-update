@@ -37,6 +37,6 @@ jobs:
         path: swift-dependency-updater
         ref: actions
     - name: Run swift-dependency-updater
-      run: cd swift-dependency-updater && swift run swift-dependency-updater list ../repo
+      run: cd swift-dependency-updater && swift run swift-dependency-updater github ../repo
       env:
         TOKEN: ${{ steps.generate_token.outputs.token }}
