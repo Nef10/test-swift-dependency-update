@@ -29,7 +29,7 @@ jobs:
         output-file: ./coverage/lcov.info
     - name: Enforce test coverage threshhold
       if: ${{ matrix.os == 'ubuntu-latest' }}
-      uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
+      uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
       with:
         path: ./coverage/lcov.info
         min_coverage: 100
