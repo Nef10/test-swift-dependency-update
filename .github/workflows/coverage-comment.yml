@@ -37,11 +37,10 @@ jobs:
         run: |
           echo "pr_number=$(cat ./NR)" >> $GITHUB_ENV
       - name: Generate code coverage report
-        uses: Nef10/lcov-reporter-action@v0.6.0
+        uses: Nef10/lcov-reporter-action@e7f0fad3a1f6a533d2af5af50574410f4905e904
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: lcov.info
-          pr-number: ${{ env.pr_number }}
           hide-branch-coverage: true
           output-file: comment.html
       - name: Post code coverage report
