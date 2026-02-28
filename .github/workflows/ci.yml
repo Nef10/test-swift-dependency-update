@@ -43,7 +43,7 @@ jobs:
       run: mv ./coverage/lcov.info ./pr/lcov.info
     - name: Upload Coverage Information for Comment
       if: ${{ matrix.os == 'ubuntu-latest' }}
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: pr
         path: pr/
